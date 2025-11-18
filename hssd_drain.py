@@ -1,37 +1,40 @@
 import plotly.graph_objects as go
 
-# This makes the clean Sankey diagram showing exactly where the $161K went
-fig = go.Figure(go.Sankey(
-    arrangement='snap',
+fig = go.Figure(data=[go.Sankey(
+    arrangement = "snap",
     node = dict(
-        pad=25,
-        thickness=30,
-        line=dict(color="black", width=1),
-        label=[
-            "Hot Springs School District<br>State Foundation Funding<br>(2024-25 • 82% poverty)",
-            "49 Students Exit via EFA",
-            "St. John's Catholic School<br>Hot Springs<br>38 students → $131,334",
-            "Calvary Christian Academy<br>Hot Springs<br>11 students → $29,812",
-            "Direct Loss to HSSD<br>$161,146",
-            "Amplified Budget Hole<br>(fixed costs + desegregation hit)<br>≈ $240K–$320K"
+        pad = 30,
+        thickness = 40,
+        line = dict(color = "black", width = 1),
+        label = [
+            "Hot Springs School District<br>State Foundation Funding<br>(2024-25 • 82% poverty district)",
+            "49 EFA Students Leave",
+            "St. John Catholic School (Hot Springs)<br>38 students • $131,334",
+            "Calvary Christian Academy (Hot Springs)<br>11 students • $29,812",
+            "Direct Public Funding Loss<br>$161,146",
+            "Amplified Budget Damage<br>(fixed costs, desegregation payments, etc.)<br>estimated $240K–$320K total hole"
         ],
-        color=["#2166ac", "#fdae6b", "#1b9e77", "#1b9e77", "#b2182b", "#67000d"]
+        color = [
+            "#2c7bb6",   # HSSD (blue)
+            "#fdae61",   # leaving students (orange)
+            "#1b9e77",   # St. John (green)
+            "#1b9e77",   # Calvary (green)
+            "#d7191c",   # direct loss (red)
+            "#7f0000"    # amplified damage (dark red)
+        ]
     ),
     link = dict(
-        source = [0, 1, 1, 0],
-        target = [1, 2, 3, 4],
-        value  = [161146, 131334, 29812, 161146],
-        color = ["#fdae6b55", "#1b9e7788", "#1b9e7788", "#b2182b99"]
-    )
-))
+        source = [0, 1, 1, 0, 0],  # from HSSD → students → schools, and HSSD → losses
+        target = [1, 2, 3, 4, 5],
+        value  = [161146, 131334, 29812, 161146, 120000],  # last one is illustrative midpoint of extra damage
+        label  = ["Students exit", "$131,334", "$29,812", "Direct loss", "~$120K extra damage (est.)"],
+        color = ["#fdae6188", "#1b9e7788", "#1b9e7788", "#d7191c99", "#7f000088"]
+    ))])
 
 fig.update_layout(
-    title_text="<b>Arkansas LEARNS Act in Action (2024-25)<br>Hot Springs School District → Two Religious Private Schools<br>$161,146 real dollars diverted over 49 kids</b>",
-    font_size=15,
-    height=750,
-    paper_bgcolor="white"
+    title_text="<b>Arkansas Education Freedom Accounts (2024-25)<br>Hot Springs School District → Religious Private Schools<br>Direct public funding diverted: $161,146 over 49 students</b>",
+    font_size=14,
+    height=700
 )
 
-fig.write_image("hssd_efa_drain_exact.png")  # saves the PNG file
-fig.show()  # shows it in your browser when you run the script
-print("Graphic saved as hssd_efa_drain_exact.png — ready to post")
+fig.show()  # or fig.write_html("hssd_efa_drain.html") to save
