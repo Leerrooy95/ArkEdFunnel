@@ -2,6 +2,9 @@
 
 > **The money is leaving public schools. The classrooms are paying.**
 
+See also: Funding & independence analysis of the 2024-25 EFA evaluation  
+https://github.com/Leerrooy95/SCDP-Walton-FundingAnalysis
+
 ## Goal
 Prove that **Education Freedom Accounts (EFAs)** + **desegregation transfer limits** are **draining Hot Springs School District (HSSD)** — violating **Lake View adequacy standards**.
 
