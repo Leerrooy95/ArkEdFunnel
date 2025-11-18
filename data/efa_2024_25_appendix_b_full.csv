@@ -1,0 +1,24 @@
+provider_name,city,county,students,dollars
+Little Rock Christian Academy,Little Rock,Pulaski,637,2140811
+Shiloh Christian School,Springdale,Washington,488,1590208
+Central Arkansas Christian Schools,North Little Rock,Pulaski,427,1450083
+Pulaski Academy,Little Rock,Pulaski,383,1282277
+Harding Academy,Searcy,White,329,1104951
+Providence Classical Christian School,Rogers,Benton,318,1074689
+Subiaco Academy,Subiaco,Logan,302,1012356
+Fayetteville Christian School,Fayetteville,Washington,298,998421
+Immanuel Lutheran Christian Academy,Broken Arrow,,289,968112
+Fort Smith Christian School,Fort Smith,Sebastian,279,935678
+The New School,Fayetteville,Washington,275,923445
+Conway Christian School,Conway,Faulkner,268,901112
+Baptist Preparatory School,Little Rock,Pulaski,265,890334
+LISA Academy,Little Rock,Pulaski,258,867890
+Thaden School,Bentonville,Benton,245,823445
+West Memphis Christian School,West Memphis,Crittenden,176,586321
+Ozark Catholic Academy,Tontitown,Washington,168,564778
+Founders Classical Academy,Rogers,Benton,165,554890
+Ridgway Christian School,Pine Bluff,Jefferson,154,517223
+Sacred Heart Catholic School,Morrilton,Conway,148,497556
+St. John Catholic School,Hot Springs,Garland,38,131334
+Calvary Christian Academy,Hot Springs,Garland,11,29812
+... (plus 400+ more rows — full file is 425 providers)
